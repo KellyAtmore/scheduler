@@ -4,15 +4,16 @@ import InterviewerListItem from "./InterviewerListItem";
 
 
 
-const InterviewerList = ({ interviewers, interviewer, setInterviewer }) => {
+const InterviewerList = ({ interviewers, value, onChange }) => {
   
 
   const interviewerArr = interviewers.map((i) => (
     <InterviewerListItem 
+    key={i.id}
     name={i.name} 
     avatar={i.avatar} 
-    setInterviewer={() => setInterviewer(i.id)} 
-    selected={i.id === interviewer} 
+    setInterviewer={() => onChange(i.id)} 
+    selected={i.id === value} 
     />
   ));
 

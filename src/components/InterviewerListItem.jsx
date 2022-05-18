@@ -3,7 +3,8 @@ import "components/InterviewerListItem.scss";
 import classNames from "classnames";
 
 const InterviewerListItem = ({ name, avatar, selected, setInterviewer }) => {
-  const interviewerClass = classNames('interviewers__item', { 'interviewers__item--selected': selected });
+  const interviewerClass = classNames('interviewers__item', 
+  { 'interviewers__item--selected': selected });
 
   return (
     <li onClick={setInterviewer} className={interviewerClass}>
