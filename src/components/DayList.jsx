@@ -1,21 +1,21 @@
-import React, { useLayoutEffect } from "react";
+import React from "react";
 import DayListItem from "./DayListItem";
 
 
-export default function DayList(props) {
-
+export default function DayList (props){
+  const { days, value, onChange } = props;
+  
   return (
     <ul>
-      {props.days.map((day) => (
-        <DayListItem
-          key={day.id}
-          name={day.name}
-          spots={day.spots}
-          selected={day.name === props.value}
-          setDay={() => props.onChange(day.name)}
-        />
+      {days.map((day) => (
+        <DayListItem 
+        key={day.id} 
+        name={day.name} 
+        spots={day.spots} 
+        selected={day.name === value} 
+        setDay={onChange} />
       ))}
     </ul>
   );
-}
+};
 
