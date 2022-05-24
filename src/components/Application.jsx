@@ -16,7 +16,7 @@ const Application = () => {
 
   const appointments = getAppointmentsForDay(state, state.day);
   const interviewers = getInterviewersForDay(state, state.day);
-
+  
   const schedule = appointments.map((appointment) => {
     const interview = getInterview(state, appointment.interview);
     
@@ -32,7 +32,6 @@ const Application = () => {
       />
     );
   });
-  
   return (
     <main className="layout">
       <section className="sidebar">

@@ -1,8 +1,6 @@
 import {useState, useEffect} from "react";
 import axios from "axios";
 
-
-
 const useApplicationData = () => {
 
   const setDay = day => setState({ ...state, day });
@@ -16,9 +14,9 @@ const useApplicationData = () => {
 
   useEffect(() => {
     Promise.all([
-      axios.get('/api/days'),
-      axios.get('/api/appointments'),
-      axios.get('/api/interviewers')
+      axios.get(`/api/days`),
+      axios.get(`/api/appointments`),
+      axios.get(`/api/interviewers`)
     ]).then((all) => {
       setState((prev) => ({
         ...prev,
@@ -27,9 +25,9 @@ const useApplicationData = () => {
         interviewers: all[2].data
       }));
     })
-      .catch((err) => {
-        throw err
-      })
+      // .catch((err) => {
+      //   throw err
+      // })
   }, []);
 
   function bookInterview(id, interview) {

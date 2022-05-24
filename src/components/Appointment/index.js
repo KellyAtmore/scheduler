@@ -43,7 +43,6 @@ console.log("mode", mode);
     transition(ERROR_SAVE, true)});
 }
 
-
 //if delete is selected, confirm this is what they want as it is a destructive action
 const onDelete = () => {
   transition(CONFIRM)
@@ -61,7 +60,6 @@ function confirmDelete() {
      })
       .catch(() => transition(ERROR_DELETE, true));
     }
-
 
 //components are rendered below based on what has been selected and their state 
 return (
