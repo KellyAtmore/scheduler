@@ -18,23 +18,21 @@ export default function Form(props) {
       setError("Please select an interviewer");
       return;
     } 
-      setError("")
+      setError("");
       props.onSave(student, interviewer);
    
   }
   
   const reset = () => {
-    setStudent("")
-    setInterviewer(null)
+    setStudent("");
+    setInterviewer(null);
   }
   
   const cancel = () => {
-    reset()
+    reset();
     props.onCancel();
   }
 
-
- console.log("student",student);
   return (
     <main className="appointment__card appointment__card--create">
       <section className="appointment__card-left">

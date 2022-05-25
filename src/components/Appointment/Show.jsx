@@ -20,7 +20,6 @@ export default function Show(props) {
         onClick={props.onEdit}
       />
       <img
-      
         className="appointment__actions-button"
         src="images/trash.png"
         alt="Delete"

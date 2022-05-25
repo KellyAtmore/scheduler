@@ -27,7 +27,6 @@ export default function Appointment(props) {
   props.interview ? SHOW : EMPTY
 );
 
-console.log("mode", mode);
 //user saves an appointment and the SHOW component is rendered
  const save = (name, interviewer) => {
   const interview = {
@@ -45,7 +44,7 @@ console.log("mode", mode);
 
 //if delete is selected, confirm this is what they want as it is a destructive action
 const onDelete = () => {
-  transition(CONFIRM)
+  transition(CONFIRM);
 }
 
 //delete an appointment and render the EMPTY view
