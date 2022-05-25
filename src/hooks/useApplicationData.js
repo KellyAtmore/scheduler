@@ -36,6 +36,7 @@ const useApplicationData = () => {
       ...state.appointments,
       [id]: appointment,
     };
+    console.log("appointment", appointment)
     return axios.put(`/api/appointments/${id}`, appointment)
     .then(() => {
       const days = updateSpots(state, appointments);
