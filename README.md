@@ -1,5 +1,9 @@
 # Interview Scheduler
 
+
+## Description
+A single page app built using React. The app allows a student to book, edit and view appointments with mentors.
+
 ## Setup
 
 Install dependencies with `npm install`.
